@@ -3,4 +3,7 @@
 
 Аскинема игры, которая проверяет чётность: https://asciinema.org/a/ePrHNm4KItjwb3nShkMwnEs6X;
 
-Аскинема игры-калькулятороа: https://asciinema.org/a/ePrHNm4KItjwb3nShkMwnEs6X
+Аскинема игры-калькулятороа: https://asciinema.org/a/ePrHNm4KItjwb3nShkMwnEs6X;
+
+Аскинема игры, проверяющей НОД: https://asciinema.org/a/pBxxIYnTQ8vyopxJMmjeOSbKN
+
