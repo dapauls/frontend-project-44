@@ -9,5 +9,5 @@
 
 Игра "Арифметическая прогрессия": https://asciinema.org/a/WwFzqfggcHUoP95DsrerGqfyH;
 
-Игра "Простое ли число?": https://asciinema.org/a/OMnJ8mDfR2r6vvz8ffT7STrWc;
+Игра "Простое ли число?": https://asciinema.org/a/OMnJ8mDfR2r6vvz8ffT7STrWc.
 
