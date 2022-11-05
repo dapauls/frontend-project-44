@@ -9,12 +9,9 @@ const getRandomNumber = (min, max) => {
 };
 
 const isPrime = (num) => {
-  const biggestDigit = 9;
   const result = [];
-  for (let i = 2; i <= biggestDigit; i += 1) {
-    if (i === num) {
-      continue;
-    } else if (num % i === 0) {
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
       result.push(1);
     }
   }
