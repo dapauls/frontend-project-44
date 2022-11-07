@@ -28,8 +28,6 @@ const getRound = () => {
   return [question, correctAnswer];
 };
 
-const startPrimeGame = () => {
+export default () => {
   commonGame(task, getRound);
 };
-
-export default startPrimeGame();

@@ -9,8 +9,6 @@ const getRound = () => {
   return [question, correctAnswer];
 };
 
-const game = () => {
+export default () => {
   commonGame(task, getRound);
 };
-
-export default game;
