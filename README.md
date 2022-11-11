@@ -6,7 +6,6 @@
 ## Installing the game: 
 
 Minimum requirements: 
-
 `Node.js 13+`
 <br/>
 <br/>
