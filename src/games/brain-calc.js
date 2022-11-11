@@ -1,14 +1,14 @@
 import commonGame from '../index.js';
 
-const randomArrIndex = (array) => array[Math.floor(Math.random() * array.length)];
+import { getRandomArrIndex } from '../utils.js';
 
-const task = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const getRound = () => {
   const numberOne = Math.round(Math.random() * 100);
   const numberTwo = Math.round(Math.random() * 100);
   const operations = ['+', '-', '*'];
-  const randomOperation = randomArrIndex(operations);
+  const randomOperation = getRandomArrIndex(operations);
   const question = `${numberOne.toString()} ${randomOperation} ${numberTwo.toString()}`;
   const rightAnswer = (num1, num2) => {
     let result;
@@ -26,5 +26,5 @@ const getRound = () => {
 };
 
 export default () => {
-  commonGame(task, getRound);
+  commonGame(description, getRound);
 };

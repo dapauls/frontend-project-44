@@ -28,7 +28,7 @@ const getHiddenProgression = (array, randomHid) => {
   return array;
 };
 
-const task = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const getRound = () => {
   const hidden = randomIndex();
@@ -42,5 +42,5 @@ const getRound = () => {
 };
 
 export default () => {
-  commonGame(task, getRound);
+  commonGame(description, getRound);
 };

@@ -1,10 +1,6 @@
 import commonGame from '../index.js';
 
-const getRandomNumber = (min, max) => {
-  const minNum = Math.ceil(min);
-  const maxNum = Math.floor(max);
-  return Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
-};
+import { getRandomNumberRange } from '../utils.js';
 
 const isPrime = (num) => {
   for (let i = 2; i < num; i += 1) {
@@ -18,10 +14,10 @@ const isPrime = (num) => {
   return true;
 };
 
-const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getRound = () => {
-  const randomNumber = getRandomNumber(2, 100);
+  const randomNumber = getRandomNumberRange(2, 100);
   const question = randomNumber;
   const rightAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   const correctAnswer = rightAnswer;
@@ -29,5 +25,5 @@ const getRound = () => {
 };
 
 export default () => {
-  commonGame(task, getRound);
+  commonGame(description, getRound);
 };

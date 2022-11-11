@@ -1,8 +1,10 @@
 import commonGame from '../index.js';
 
-const task = 'Find the greatest common divisor of given numbers.';
+import { getRandomNumber } from '../utils.js';
 
-const rightAnswer = (numOne, numTwo) => {
+const description = 'Find the greatest common divisor of given numbers.';
+
+const getGcd = (numOne, numTwo) => {
   let nod;
   if (numOne === numTwo) {
     nod = numOne;
@@ -24,13 +26,13 @@ const rightAnswer = (numOne, numTwo) => {
 };
 
 const getRound = () => {
-  const num1 = Math.round(Math.random() * 100);
-  const num2 = Math.round(Math.random() * 100);
+  const num1 = getRandomNumber();
+  const num2 = getRandomNumber();
   const question = `${num1} ${num2}`;
-  const correctAnswer = rightAnswer(num1, num2).toString();
+  const correctAnswer = getGcd(num1, num2).toString();
   return [question, correctAnswer];
 };
 
 export default () => {
-  commonGame(task, getRound);
+  commonGame(description, getRound);
 };
