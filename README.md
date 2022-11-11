@@ -4,7 +4,7 @@
 # PROJECT DESCRIPTION:
  "Brain-games" - these are five educational mini-games (Prime Game, Even Game, GCD Game, Progression Game, Calculator Game).
 ## Installing the game: 
-<br/>
+
 Minimum requirements: 
 
 `Node.js 13+`
