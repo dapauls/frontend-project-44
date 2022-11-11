@@ -1,7 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/dapauls/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/dapauls/frontend-project-44/actions)
 
-<<<<<<< HEAD
 # Project description:
  "Brain-games" - these are five educational mini-games (Prime Game, Even Game, GCD Game, Progression Game, Calculator Game).
 ## Installing the game: 
@@ -46,7 +45,6 @@ To start the game:
  [![asciicast](https://asciinema.org/a/733LOyy9Rnz5SxMg59RUaEIw9.svg)](https://asciinema.org/a/733LOyy9Rnz5SxMg59RUaEIw9)
 
 --------------------------
->>>>>>> c0b9204f9b0b594c96ce218b4b1c965770bf8745
 
 # BRAIN-PROGRESSION
 ## Find the missing number in progression
