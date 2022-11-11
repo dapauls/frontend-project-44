@@ -11,3 +11,4 @@
 
 Игра "Простое ли число?": https://asciinema.org/a/7qJtDQYMZ82JwJZ1PUxFDlZld.
 
+https://asciinema.org/a/733LOyy9Rnz5SxMg59RUaEIw9
