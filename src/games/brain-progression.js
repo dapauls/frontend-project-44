@@ -32,7 +32,7 @@ const getRound = () => {
   const progression = getProgression();
   const progressionWithoutHidden = progression;
   const answer = rightAnswer(progressionWithoutHidden, hidden);
-  const correctAnswer = toString(answer);
+  const correctAnswer = answer.toString();
   const hiddenProgression = getHiddenProgression(progression, hidden);
   const question = hiddenProgression.join(', ');
   return [question, correctAnswer];
