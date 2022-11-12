@@ -23,7 +23,8 @@ const getProgression = () => {
 const rightAnswer = (pro, num) => pro[num];
 
 const getHiddenProgression = (array, randomHid) => {
-  array[randomHid] = '..';
+  const arra = array;
+  arra[randomHid] = '.. ';
   return array;
 };
 
