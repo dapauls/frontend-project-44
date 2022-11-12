@@ -9,7 +9,7 @@ const randomIndex = () => getRandomNumber(0, 7);
 const getProgression = () => {
   let firstNumber = getRandomNumber(1, 100);
   const stepOfProgression = getRandomNumber(1, 10);
-  const lengthOfRowWithoutFirstNumber = 9;
+  const lengthOfRowWithoutFirstNumber = 7;
   const numbers = [];
   numbers.push(firstNumber);
   for (let i = 0; i < lengthOfRowWithoutFirstNumber; i += 1) {
