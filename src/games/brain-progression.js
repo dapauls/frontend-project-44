@@ -4,15 +4,9 @@ import getRandomNumber from '../utils.js';
 
 const randomIndex = () => getRandomNumber(0, 7);
 
-/* вместо const randomIndex = () => getRandomNumber(0, 7); нужно
-const getRandomArrIndex = (array) => array[Math.floor(Math.random() * array.length)];
-где array это массив прогрессии */
-
-// редачить отсюда
-
 const getProgression = () => {
-  let firstNumber = getRandomNumber(1, 100);
-  const stepOfProgression = getRandomNumber(1, 10);
+  let firstNumber = Math.round(Math.random() * 100);
+  const stepOfProgression = Math.round(Math.random() * 10);
   const lengthOfRowWithoutFirstNumber = 6;
   const numbers = [];
   numbers.push(firstNumber);
@@ -31,8 +25,6 @@ const getHiddenProgression = (array, randomHid) => {
   return array;
 };
 
-// до сюда
-
 const description = 'What number is missing in the progression?';
 
 const getRound = () => {
@@ -40,7 +32,7 @@ const getRound = () => {
   const progression = getProgression();
   const progressionWithoutHidden = progression;
   const answer = rightAnswer(progressionWithoutHidden, hidden);
-  const correctAnswer = answer.toString();
+  const correctAnswer = toString(answer);
   const hiddenProgression = getHiddenProgression(progression, hidden);
   const question = hiddenProgression.join(', ');
   return [question, correctAnswer];
