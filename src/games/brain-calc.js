@@ -1,27 +1,35 @@
 import commonGame from '../index.js';
 
-import { getRandomArrIndex } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const description = 'What is the result of the expression?';
 
+const rightAnswer = (num1, num2, sign) => {
+  let result;
+  if (sign === '+') {
+    result = num1 + num2;
+  } else if (sign === '-') {
+    result = num1 - num2;
+  } else if (sign === '*') {
+    result = num1 * num2;
+  }
+  return result.toString();
+};
+
+const expression = (num1, num2, sign) => {
+  const question = `${num1.toString()} ${sign} ${num2.toString()}`;
+  return question;
+};
+
+const getRandomArrIndex = (array) => array[Math.floor(Math.random() * array.length)];
+
 const getRound = () => {
-  const numberOne = Math.round(Math.random() * 100);
-  const numberTwo = Math.round(Math.random() * 100);
   const operations = ['+', '-', '*'];
+  const numberOne = getRandomNumber(1, 300);
+  const numberTwo = getRandomNumber(1, 300);
   const randomOperation = getRandomArrIndex(operations);
-  const question = `${numberOne.toString()} ${randomOperation} ${numberTwo.toString()}`;
-  const rightAnswer = (num1, num2) => {
-    let result;
-    if (randomOperation === '+') {
-      result = num1 + num2;
-    } else if (randomOperation === '-') {
-      result = num1 - num2;
-    } else if (randomOperation === '*') {
-      result = num1 * num2;
-    }
-    return result.toString();
-  };
-  const correctAnswer = rightAnswer(numberOne, numberTwo);
+  const question = expression(numberOne, numberTwo, randomOperation);
+  const correctAnswer = rightAnswer(numberOne, numberTwo, randomOperation);
   return [question, correctAnswer];
 };
 

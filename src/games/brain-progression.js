@@ -1,15 +1,18 @@
 import commonGame from '../index.js';
 
-const randomNumber = (min, max) => {
-  const r = Math.random() * (max - min) + min;
-  return Math.floor(r);
-};
+import getRandomNumber from '../utils.js';
 
-const randomIndex = () => randomNumber(0, 7);
+const randomIndex = () => getRandomNumber(0, 7);
+
+/* вместо const randomIndex = () => getRandomNumber(0, 7); нужно
+const getRandomArrIndex = (array) => array[Math.floor(Math.random() * array.length)];
+где array это массив прогрессии */
+
+// редачить отсюда
 
 const getProgression = () => {
-  let firstNumber = Math.round(Math.random() * 100);
-  const stepOfProgression = Math.round(Math.random() * 10);
+  let firstNumber = getRandomNumber(1, 100);
+  const stepOfProgression = getRandomNumber(1, 10);
   const lengthOfRowWithoutFirstNumber = 6;
   const numbers = [];
   numbers.push(firstNumber);
@@ -27,6 +30,8 @@ const getHiddenProgression = (array, randomHid) => {
   array[randomHid] = '.. ';
   return array;
 };
+
+// до сюда
 
 const description = 'What number is missing in the progression?';
 
