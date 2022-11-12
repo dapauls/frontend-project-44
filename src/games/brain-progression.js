@@ -2,11 +2,13 @@ import commonGame from '../index.js';
 
 import getRandomNumber from '../utils.js';
 
+// const getRandomArrIndex = (array) => array[Math.floor(Math.random() * array.length)];
+
 const randomIndex = () => getRandomNumber(0, 7);
 
 const getProgression = () => {
-  let firstNumber = Math.round(Math.random() * 100);
-  const stepOfProgression = Math.round(Math.random() * 10);
+  let firstNumber = getRandomNumber(1, 100);
+  const stepOfProgression = getRandomNumber(1, 10);
   const lengthOfRowWithoutFirstNumber = 6;
   const numbers = [];
   numbers.push(firstNumber);
@@ -32,7 +34,7 @@ const getRound = () => {
   const progression = getProgression();
   const progressionWithoutHidden = progression;
   const answer = rightAnswer(progressionWithoutHidden, hidden);
-  const correctAnswer = answer.toString();
+  const correctAnswer = String(answer);
   const hiddenProgression = getHiddenProgression(progression, hidden);
   const question = hiddenProgression.join(', ');
   return [question, correctAnswer];
