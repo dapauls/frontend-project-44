@@ -2,17 +2,12 @@ import commonGame from '../index.js';
 
 import getRandomNumber from '../utils.js';
 
-// const getRandomArrIndex = (array) => array[Math.floor(Math.random() * array.length)];
-
-const randomIndex = () => getRandomNumber(0, 9);
-
-const getProgression = () => {
+const getProgression = (length) => {
   let firstNumber = getRandomNumber(1, 100);
   const stepOfProgression = getRandomNumber(1, 10);
-  const lengthOfRowWithoutFirstNumber = 9;
   const numbers = [];
   numbers.push(firstNumber);
-  for (let i = 0; i < lengthOfRowWithoutFirstNumber; i += 1) {
+  for (let i = 0; i < length; i += 1) {
     const lastNumber = firstNumber + stepOfProgression;
     numbers.push(lastNumber);
     firstNumber = lastNumber;
@@ -20,24 +15,15 @@ const getProgression = () => {
   return numbers;
 };
 
-const rightAnswer = (pro, num) => pro[num];
-
-const getHiddenProgression = (array, randomHid) => {
-  const arra = array;
-  arra[randomHid] = '..';
-  return array;
-};
-
 const description = 'What number is missing in the progression?';
 
 const getRound = () => {
-  const hidden = randomIndex();
-  const progression = getProgression();
-  const progressionWithoutHidden = progression;
-  const answer = rightAnswer(progressionWithoutHidden, hidden);
-  const correctAnswer = String(answer);
-  const hiddenProgression = getHiddenProgression(progression, hidden);
-  const question = hiddenProgression.join(' ');
+  const length = getRandomNumber(5, 10);
+  const progression = getProgression(length);
+  const randomIndex = getRandomNumber(0, length);
+  const correctAnswer = String(progression[randomIndex]);
+  progression[randomIndex] = '..';
+  const question = progression.join(' ');
   return [question, correctAnswer];
 };
 
