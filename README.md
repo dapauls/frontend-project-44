@@ -11,8 +11,8 @@ Minimum requirements: `Node.js 13+`
 Installation:
 ```
 git@github.com:dapauls/frontend-project-44.git 
-make install
-make lint 
+npm install
+npm lint 
 ```
 --------------------------
 
