@@ -56,7 +56,7 @@ To start the game:
 --------------------------
 
 # BRAIN-СALC
-## Solve the problem
+## Find a solution to an arithmetic expression
 <br/>
 To start the game:
 
