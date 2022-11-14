@@ -38,7 +38,7 @@ To start the game:
 <br/>
 <br/>
 <br/>
- [![asciicast](https://asciinema.org/a/ZLnmYsVCtYEvb2bKPO07A8Gtk.svg)](https://asciinema.org/a/ZLnmYsVCtYEvb2bKPO07A8Gtk)
+[![asciicast](https://asciinema.org/a/Qn8kKm2ecGlkpGjdQzgArS85A.svg)](https://asciinema.org/a/Qn8kKm2ecGlkpGjdQzgArS85A)
 
 --------------------------
 
