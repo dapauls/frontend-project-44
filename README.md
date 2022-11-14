@@ -69,7 +69,7 @@ To start the game:
 --------------------------
 
 # BRAIN-PRIME
-## Solve the problem
+## Аnswer the question: is the number prime?
 <br/>
 To start the game:
 
