@@ -17,7 +17,7 @@ npm lint
 --------------------------
 
 # BRAIN-EVEN
-## Answer the question, is the number even?
+## Answer the question: is the number even?
 <br/>
 To start the game:
 
