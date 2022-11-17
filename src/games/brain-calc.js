@@ -30,8 +30,8 @@ const getRandomOperationSymbol = (symbols) => {
 
 const getAnswerAndQuestion = () => {
   const operations = ['+', '-', '*'];
-  const numberOne = getRandomNumber(1, 300);
-  const numberTwo = getRandomNumber(1, 300);
+  const numberOne = getRandomNumber(1, 10);
+  const numberTwo = getRandomNumber(1, 10);
   const randomOperation = getRandomOperationSymbol(operations);
   const question = `${numberOne} ${randomOperation} ${numberTwo}`;
   const correctAnswer = String(rightAnswer(numberOne, numberTwo, randomOperation));
