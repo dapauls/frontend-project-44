@@ -34,11 +34,13 @@ const expression = (num1, num2, sign) => {
   return question;
 };
 
-const getRandomOperationSymbol = (symbols) => {
+/* const getRandomOperationSymbol = (symbols) => {
   const randomIndex = getRandomNumber(0, symbols.length);
   const randomSymbol = symbols[randomIndex];
   return randomSymbol;
-};
+}; */
+
+const getRandomOperationSymbol = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 const getAnswerAndQuestion = () => {
   const operations = ['+', '-', '*'];
