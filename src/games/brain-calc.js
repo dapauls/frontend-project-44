@@ -17,10 +17,10 @@ const rightAnswer = (num1, num2, symbol) => {
   }
 };
 
-const expression = (num1, num2, sign) => {
+/* const expression = (num1, num2, sign) => {
   const question = `${num1.toString()} ${sign} ${num2.toString()}`;
   return question;
-};
+}; */
 
 const getRandomOperationSymbol = (symbols) => {
   const randomIndex = getRandomNumber(0, symbols.length);
@@ -33,7 +33,7 @@ const getAnswerAndQuestion = () => {
   const numberOne = getRandomNumber(1, 300);
   const numberTwo = getRandomNumber(1, 300);
   const randomOperation = getRandomOperationSymbol(operations);
-  const question = expression(numberOne, numberTwo, randomOperation);
+  const question = `${numberOne} ${randomOperation} ${numberTwo}`;
   const correctAnswer = String(rightAnswer(numberOne, numberTwo, randomOperation));
   return [question, correctAnswer];
 };
