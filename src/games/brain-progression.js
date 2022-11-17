@@ -2,25 +2,22 @@ import commonGame from '../index.js';
 
 import getRandomNumber from '../utils.js';
 
-const getProgression = (length) => {
-  let firstNumber = getRandomNumber(1, 100);
-  const stepOfProgression = getRandomNumber(1, 10);
-  const numbers = [];
-  numbers.push(firstNumber);
-  for (let i = 0; i < length; i += 1) {
-    const lastNumber = firstNumber + stepOfProgression;
-    numbers.push(lastNumber);
-    firstNumber = lastNumber;
+const getProgression = (firstNumber, stepOfProgression, lengthOfProgression) => {
+  const progression = [];
+  for (let i = 0; i < lengthOfProgression; i += 1) {
+    progression.push(firstNumber + stepOfProgression * i);
   }
-  return numbers;
+  return progression;
 };
 
 const description = 'What number is missing in the progression?';
 
-const getRound = () => {
-  const length = getRandomNumber(5, 10);
-  const progression = getProgression(length);
-  const randomIndex = getRandomNumber(0, length);
+const getAnswerAndQuestion = () => {
+  const lengthOfProgression = getRandomNumber(5, 10);
+  const stepOfProgression = getRandomNumber(1, 10);
+  const firstNumber = getRandomNumber(1, 100);
+  const progression = getProgression(firstNumber, stepOfProgression, lengthOfProgression);
+  const randomIndex = getRandomNumber(0, lengthOfProgression);
   const correctAnswer = String(progression[randomIndex]);
   progression[randomIndex] = '..';
   const question = progression.join(' ');
@@ -28,5 +25,5 @@ const getRound = () => {
 };
 
 export default () => {
-  commonGame(description, getRound);
+  commonGame(description, getAnswerAndQuestion);
 };

@@ -16,14 +16,13 @@ const isPrime = (num) => {
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const getRound = () => {
+const getAnswerAndQuestion = () => {
   const randomNumber = getRandomNumber(2, 100);
   const question = randomNumber;
-  const rightAnswer = isPrime(randomNumber) ? 'yes' : 'no';
-  const correctAnswer = rightAnswer;
+  const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
 export default () => {
-  commonGame(description, getRound);
+  commonGame(description, getAnswerAndQuestion);
 };

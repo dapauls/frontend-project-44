@@ -25,7 +25,7 @@ const getGcd = (numOne, numTwo) => {
   return nod;
 };
 
-const getRound = () => {
+const getAnswerAndQuestion = () => {
   const num1 = getRandomNumber(1, 100);
   const num2 = getRandomNumber(1, 100);
   const question = `${num1} ${num2}`;
@@ -34,5 +34,5 @@ const getRound = () => {
 };
 
 export default () => {
-  commonGame(description, getRound);
+  commonGame(description, getAnswerAndQuestion);
 };
