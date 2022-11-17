@@ -4,7 +4,7 @@ import getRandomNumber from '../utils.js';
 
 const description = 'What is the result of the expression?';
 
-const rightAnswer = (num1, num2, symbol) => {
+/* const rightAnswer = (num1, num2, symbol) => {
   switch (symbol) {
     case '+':
       return num1 + num2;
@@ -15,6 +15,18 @@ const rightAnswer = (num1, num2, symbol) => {
     default:
       return null;
   }
+}; */
+
+const rightAnswer = (num1, num2, symbol) => {
+  let result;
+  if (symbol === '+') {
+    result = num1 + num2;
+  } else if (symbol === '-') {
+    result = num1 - num2;
+  } else if (symbol === '*') {
+    result = num1 * num2;
+  }
+  return result;
 };
 
 const expression = (num1, num2, sign) => {
